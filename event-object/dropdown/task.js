@@ -1,0 +1,14 @@
+let dropdownValue = document.querySelector('.dropdown__value');
+let dropdownList = document.querySelector('.dropdown__list');
+
+dropdownValue.addEventListener('click', () => {
+  dropdownList.classList.add('dropdown__list_active');
+});
+
+function select(event) {
+  dropdownValue.textContent = event.target.textContent;
+  dropdownList.classList.remove('dropdown__list_active');
+  event.preventDefault();
+}
+
+dropdownList.addEventListener('click', select);
