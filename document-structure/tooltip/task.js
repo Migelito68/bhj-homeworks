@@ -8,9 +8,10 @@ document.addEventListener('click', (e) => {
         if (document.querySelector('.tooltip').classList.contains('tooltip_active')) {
             document.querySelector('.tooltip').remove();
         } else {
-            body.insertAdjacentHTML('afterbegin', `<div class="tooltip tooltip_active">${e.target.title}</div>`);
-            document.querySelector('.tooltip').style.top = (Number(e.target.getBoundingClientRect().top) + 20) + 'px';
-            document.querySelector('.tooltip').style.left = (Number(e.target.getBoundingClientRect().left) + 20) + 'px';
+            document.querySelector('.tooltip').classList.add('tooltip_active');
         }
+        body.insertAdjacentHTML('afterbegin', `<div class="tooltip tooltip_active">${e.target.title}</div>`);
+        document.querySelector('.tooltip').style.top = (Number(e.target.getBoundingClientRect().top) + 20) + 'px';
+        document.querySelector('.tooltip').style.left = (Number(e.target.getBoundingClientRect().left) + 20) + 'px';
     }
 })

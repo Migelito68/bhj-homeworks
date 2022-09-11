@@ -23,8 +23,3 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     addTask();
 });
-
-button.addEventListener('click', (e) => {
-    e.preventDefault();
-    addTask();
-});
